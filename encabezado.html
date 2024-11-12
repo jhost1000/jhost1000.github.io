@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valle de la Sabiduría - Librería</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToW92Z-7EeBu01AK8dqmtOuzipE0ZdPixZ1g&s" type="image/png">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 30px;
+            animation: fadeIn 2s ease-in;
+            position: relative;
+        }
+        header img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            float: left;
+            display: block;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services, .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service, .contact {
+            background-color: #f8f8f8;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+        .service h3, .contact h3 {
+            color: #4CAF50;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gallery of books images */
+        .book-gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .book-gallery img {
+            width: 30%;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://unsplash.com/es/fotos/pila-de-biblia-sobre-superficie-marron-gl7joOaABlI" alt="Biblioteca">
+        Valle de la Sabiduría - Librería
+    </header>
+
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#catalogo" id="catalogo-link">Catálogo</a>
+        <a href="#reservar">Reservar</a>
+        <a href="#contacto">Contáctanos</a>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <h2>Bienvenidos a Valle de la Sabiduría</h2>
+            <p>La librería de los grandes conocimientos, donde encuentras los mejores libros para expandir tu mente.</p>
+        </div>
+        <div class="book-gallery">
+            <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de libros 1">
+            <img src="https://images.unsplash.com/photo-1510172951991-856a654063f9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de libros 2">
+            <img src="https://images.unsplash.com/photo-1471417834049-cbf30bf7a2a4?q=80&w=1927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de libros 3">
+        </div>
+    </section>
+
+    <section id="catalogo">
+        <div class="container">
+            <h2>Catálogo</h2>
+            <p>Explora nuestra vasta colección de libros en diversas categorías. Desde literatura clásica hasta ciencia moderna.</p>
+            <a href="catalogo.html" class="btn">Ver Catálogo Completo</a>
+        </div>
+    </section>
+
+    <section id="reservar">
+        <div class="container">
+            <h2>Reserva tu Libro</h2>
+            <p>¿Quieres un libro específico? ¡Reserva lo que deseas ahora y recógelo cuando esté disponible!</p>
+            
+            <!-- Formulario de Reserva -->
+            <form action="#" method="POST">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono">
+
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" required placeholder="Ingresa tu correo electrónico">
+
+                <label for="libros">Número de Libros</label>
+                <input type="number" id="libros" name="libros" required placeholder="Cuántos libros deseas reservar">
+
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" required placeholder="Ingresa tu DNI">
+
+                <input type="submit" value="Generar Reserva">
+            </form>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes preguntas o deseas más información? ¡Estamos aquí para ayudarte!</p>
+            <div class="contact-info">
+                <div class="contact">
+                    <h3>Dirección</h3>
+                    <p>Av. Tingo María, 123 - Ciudad de Lima</p>
+                </div>
+                <div class="contact">
+                    <h3>Teléfono</h3>
+                    <p>+51 902 120 098</p>
+                    <p>+51 987 654 321</p>
+                </div>
+                <div class="contact">
+                    <h3>Email</h3>
+                    <p>contacto@valledelasabiduria.com</p>
+                </div>
+            </div>
+            <a href="mailto:contacto@valledelasabiduria.com" class="btn">Envíanos un Correo</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Valle de la Sabiduría - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
